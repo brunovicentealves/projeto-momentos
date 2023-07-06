@@ -15,3 +15,49 @@ a {
 a:hover {
     color:#dec129
 }
+
+form {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: .9em;
+    margin-bottom: .4em;
+}
+
+.form-group input,
+.form-group textarea {
+
+    padding: 0.6em;
+    color: #777;
+    font-size: 0.8em;
+}
+
+input[type="submit"]{
+    background-color:#efefef ;
+    color:#444;
+    border: 2 px splid transparent;
+    padding: 0.6em 1em;
+    font-weight: bold;
+    font-size: pointer;
+    transition: 0.4s;
+}
+
+input[type="submit"]:hover{
+    background-color:#dec129 ;
+    border-color: #dec129;
+    background-color: #dec129 ;
+    
+}
+
+
+
+
