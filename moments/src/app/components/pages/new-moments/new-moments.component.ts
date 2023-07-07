@@ -6,6 +6,8 @@ import { MomentService } from 'src/app/services/moment.service';
 
 import { Observable } from 'rxjs';
 
+import { MessagesService } from 'src/app/services/messages.service';
+
 @Component({
   selector: 'app-new-moments',
   templateUrl: './new-moments.component.html',
@@ -14,7 +16,7 @@ import { Observable } from 'rxjs';
 export class NewMomentsComponent implements OnInit{
   btnText='compartilhar!';
 
-  constructor(private momentService:MomentService){
+  constructor(private momentService:MomentService,private messagesService:MessagesService){
 
   }
 
@@ -38,6 +40,8 @@ export class NewMomentsComponent implements OnInit{
     }
 
     await this.momentService.createMoment(formData).subscribe();
+
+    this.messagesService.add("Momento adcionado com sucesso!");
 
   }
 }
