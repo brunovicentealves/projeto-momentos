@@ -1,5 +1,6 @@
-import { Component,OnInit,Input } from '@angular/core';
+import { Component,OnInit,Input, Output, EventEmitter } from '@angular/core';
 import {FormGroup,FormControl, Validators} from '@angular/forms';
+import { Moment } from 'src/app/Moments';
 
 @Component({
   selector: 'app-moment-form',
@@ -7,6 +8,8 @@ import {FormGroup,FormControl, Validators} from '@angular/forms';
   styleUrls: ['./moment-form.component.css']
 })
 export class MomentFormComponent implements OnInit{
+  //enviando dados do component filho para o pai
+  @Output() onSubmit = new EventEmitter<Moment>()
   @Input() btnText!:string
 
   //linha 1 [formGroup]="momentForm"
@@ -36,14 +39,25 @@ export class MomentFormComponent implements OnInit{
     return this.momentForm.get('description')!;
   }
 
+  onFileSelected(event:any){
+    //pega o arquivo que vem do formulario
+    const file:File = event.target.files[0];
+
+    this.momentForm.patchValue({ image: event.target.files[0] });
+
+  }
+
 
   submit(){
     //valida se submit for invalido não deixa terminar submissão
-    if(this,this.momentForm.invalid){
+    if(this.momentForm.invalid){
       return
     }
 
-    console.log("enviar formulario");
+    console.log(this.momentForm.value);
+
+    // enviando dados do formulario do component filho para o pai
+    this.onSubmit.emit(this.momentForm.value);
     
   }
 }
