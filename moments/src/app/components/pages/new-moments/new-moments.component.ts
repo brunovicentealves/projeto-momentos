@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 
 import { MessagesService } from 'src/app/services/messages.service';
 
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-new-moments',
   templateUrl: './new-moments.component.html',
@@ -16,7 +18,7 @@ import { MessagesService } from 'src/app/services/messages.service';
 export class NewMomentsComponent implements OnInit{
   btnText='compartilhar!';
 
-  constructor(private momentService:MomentService,private messagesService:MessagesService){
+  constructor(private momentService:MomentService,private messagesService:MessagesService,private router:Router){
 
   }
 
@@ -42,6 +44,8 @@ export class NewMomentsComponent implements OnInit{
     await this.momentService.createMoment(formData).subscribe();
 
     this.messagesService.add("Momento adcionado com sucesso!");
+
+    this.router.navigate(['/']);
 
   }
 }
