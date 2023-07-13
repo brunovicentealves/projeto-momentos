@@ -24,8 +24,22 @@ export class MomentService {
     return this.http.get<Reponse<Moment[]>>(this.apiUrl);
   }
 
+
+
+  getMoment(id:number):Observable<Reponse<Moment>>{
+      const url = `${this.apiUrl}/${id}`
+    return this.http.get<Reponse<Moment>>(url);
+  }
+
   createMoment(formData:FormData):Observable<FormData>{
     return this.http.post<FormData>(this.apiUrl,formData);
+
+  }
+
+
+  deleteMoment(id:number):Observable<Reponse<Moment>>{
+    const url =`${this.apiUrl}/${id}`
+    return this.http.delete<Reponse<Moment>>(url);
 
   }
 }

@@ -66,4 +66,61 @@ input[type="submit"]:hover{
     
 }
 
+/* BUTTONS */
+
+.edit-btn,.remove-btn {
+    border: 1px solid #efefef;
+    padding: .4em 1em;
+    font-size: 1em;
+    margin: 0 0.5em;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.4s;
+
+}
+
+
+button fa-icon,
+a fa-icon{
+    margin-right: 0.2em;
+}
+
+
+.edit-btn,
+.edit-btn path {
+    border-color: #fff;
+    color: #007bff;
+}
+
+
+.edit-btn:hover,
+.edit-btn:hover path {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+
+
+
+.remove-btn,
+.remove-btn path {
+    border-color: #fff;
+    color: #dc3545;
+}
+
+
+.remove-btn:hover,
+.remove-btn:hover path {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.about-moment h3,
+.actions h3,
+.comments h3 {
+  margin-bottom: 1em;
+}
+
+
+
 
