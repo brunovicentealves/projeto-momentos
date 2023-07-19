@@ -9,13 +9,13 @@ podemos incluir,editar e excluir os momentos e incluir comentários.
 
 ## Deploy
 
-Para fazer o deploy desse projeto rode
+Para fazer o deploy desse projeto rode:
 
 ```bash
   npm run deploy
 ```
 
-Para rodar o frontend precisa baixa o programa Backeend na Url :
+Para rodar o frontend precisa baixa o programa Backend na Url :
 
 https://github.com/matheusbattisti/curso_adonis_api_yt
 
