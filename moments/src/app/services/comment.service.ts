@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
-import { Moment } from '../Moments';
+import { Comment } from '../Comment';
+
+import { Reponse } from '../Response';
 
 import { environment } from '../environments/environment';
 
@@ -12,12 +14,12 @@ import { environment } from '../environments/environment';
 export class CommentService {
 
   private baseApiUrl= environment.baseApiUrl;
-  private apiUrl = `${this.baseApiUrl}/api/moments`
+  private apiUrl = `${this.baseApiUrl}api/moments`;
 
   constructor(private http:HttpClient) { }
 
-  createMoment(formData:FormData):Observable<FormData>{
-    return this.http.post<FormData>(this.apiUrl,formData);
-
+  createComment(data: Comment): Observable<Reponse<Comment>> {
+    const url = `${this.apiUrl}/${data.momentId}/comments`;
+    return this.http.post<Reponse<Comment>>(url, data);
   }
 }

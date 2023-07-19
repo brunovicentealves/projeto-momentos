@@ -15,7 +15,7 @@
           />
           <h3>{{ moment.title }}</h3>
           <p class="date">Em: {{ moment.created_at }}</p>
-            <p *ngIf="moment.coments != null else comentario">Comentario:{{moment.coments!.length}}</p>
+            <p *ngIf="moment.comments != null else comentario">Comentario:{{moment.comments!.length}}</p>
             <ng-template #comentario>Comentario:0</ng-template>
           <p><a routerLink="moments/{{ moment.id }}">Detalhes</a></p>
         </div>

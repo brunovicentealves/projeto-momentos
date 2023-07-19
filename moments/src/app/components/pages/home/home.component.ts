@@ -36,8 +36,8 @@ export class HomeComponent implements OnInit{
 
         data.map((item)=>{
           item.created_at = new Date(item.created_at!).toLocaleDateString('pt-BR');
-          if(item.coments== null){
-            item.coments==null;
+          if(item.comments== null){
+            item.comments==null;
           }
         })
 
