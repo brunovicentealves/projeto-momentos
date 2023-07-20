@@ -1,7 +1,7 @@
 
 # Projeto-Momentos
 
-é uma aplicação que foi desenvolvida o frontend em angular16 a onde criamos uma inteface de  aplicativo que registra os momentos das pessoas ,portanto  é incluimos uma foto e titulo e descrição e podemos incluir comentarios nessas fotos.
+é uma aplicação que foi desenvolvida o frontend em angular16 a onde criamos uma inteface de  aplicativo que registra os momentos das pessoas ,portanto  podemos incluir uma foto e titulo e descrição e podemos incluir comentarios nessas fotos.
 podemos incluir,editar e excluir os momentos e incluir comentários.
 
 
